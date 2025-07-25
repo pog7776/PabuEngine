@@ -1,7 +1,7 @@
 namespace Core.Engine
 {
-public abstract class Component(string name) : Object(name)
+public abstract class Component(string name, Entity entity) : Object(name)
 {
-    
+    public Entity Entity { get; } = entity;
 }
 }
