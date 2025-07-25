@@ -9,7 +9,6 @@ public class GameProcess(string name) : Process(name)
     {
         base.Tick();
         Console.WriteLine($"Game Process Ticked: {Name} {DateTime.Now}");
-        //Console.WriteLine("");
         Console.WriteLine("\nPress Q to quit.");
         ConsoleKeyInfo key = Console.ReadKey();
 
