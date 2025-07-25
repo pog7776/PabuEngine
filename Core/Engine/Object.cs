@@ -6,6 +6,6 @@ public abstract class Object(string name)
 {
     public string Name { get; set; } = name;
 
-    protected static Logger Logger { get; } = new("OBJECT");
+    protected Logger Logger { get; } = new($"{nameof(Object)}:{name}");
 }
 }
