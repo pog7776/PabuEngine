@@ -1,9 +1,24 @@
+using System.Numerics;
+
+using Core.Engine;
 using Core.Engine.Proc;
+
+using GameEngine.Sandbox;
 
 namespace GameEngine.Engine
 {
 public class GameProcess(string name) : Process(name)
 {
+    private FeatureSandbox _sandbox;
+
+    /// <inheritdoc />
+    public override void Start()
+    {
+        base.Start();
+
+        _sandbox = new FeatureSandbox("Testing");
+    }
+
     /// <inheritdoc />
     public override void Tick()
     {
