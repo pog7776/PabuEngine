@@ -92,3 +92,7 @@ http-client.private.env.json
 .idea/ApifoxUploaderProjectSetting.xml
 
 # ======================================================================================================================
+
+# User solution dotsettings
+# https://stackoverflow.com/a/22235763
+*.user
