@@ -8,11 +8,13 @@ public class Entity : Object
     private readonly List<Component> _components = [];
     private IReadOnlyList<Component> Components => _components;
 
+    public Transform Transform { get; init; }
+
     public Entity(string name) : base(name)
     {
         Logger.Name = $"{nameof(Entity)}:{Name}";
 
-        AddComponent(new Transform(this));
+        AddComponent(Transform = new Transform(this));
     }
 
     public void AddComponent(Component component)
